@@ -1,0 +1,42 @@
+.stopWatchWrapper{
+    width: 80%;
+    max-width: 550px;
+    border-radius: 50px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.stopWatchTimeViewer{
+    font-size: 70px;
+    padding: 5px 10px;
+    margin: 50px 0 0;
+    width: 80%;
+    border: solid 5px;
+    border-radius:  10px;
+    background-color: #bcb;
+    color: #333;
+    text-align: center;
+}
+.stopWatchButtons{
+    width: 80%;
+    margin: 20px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.stopWatchButtons > button{
+    font-size: 20px;
+    font-weight: 700;
+    width: 130px;
+    height: 70px;
+    border: solid #666 4px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+.stopWatchButtons > button:hover{
+    filter: brightness(1.5)
+}
+.stopWatchButtons > button:disabled{
+    filter: brightness(0.5);
+}

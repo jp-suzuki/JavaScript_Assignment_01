@@ -4,6 +4,7 @@ let seconds = 0;
 let milliSeconds = 0;
 let timerRunning = null;
 
+//１桁の場合に10の位をゼロで埋める
 function zeroPadding(inputValue){
     let outputValue = null;
     if(inputValue / 10 < 1){
@@ -13,12 +14,16 @@ function zeroPadding(inputValue){
     }
     return outputValue;
 }
+
+//時計画面表示の更新
 function displayTimes(){
     $(".hoursDisplay").text(zeroPadding(hours) + ":");
     $(".minutesDisplay").text(zeroPadding(minutes) + ":");
     $(".secondsDisplay").text(zeroPadding(seconds) + ":");
     $(".milliSecondsDisplay").text(zeroPadding(milliSeconds));
 }
+
+//時間単位の繰り上げ変換
 function timerCountUp(){
     milliSeconds += 1;
     if(milliSeconds == 100){
